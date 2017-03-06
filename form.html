@@ -3,28 +3,28 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Мишка</title>
+  <title>Form</title>
 </head>
 
 <body>
   <header class="page-header">
     <div class="page-header__logo">
-      <img src="" alt="Логотип" width="86" height="35">
+      <a href="index.html"><img src="" alt="Логотип" width="86" height="35"></a>
     </div>
     <nav class="main-nav  main-nav--closed">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
         <li class="main-nav__list-item">
-          <a href="">Каталог товаров</a>
+          <a href="#!">Каталог товаров</a>
         </li>
         <li class="main-nav__list-item">
-          <a href="">Вязание на заказ</a>
+          <a>Вязание на заказ</a>
         </li>
         <li class="main-nav__list-item">
-          <a href="">Поиск по сайту</a>
+          <a href="#!">Поиск по сайту</a>
         </li>
         <li class="main-nav__list-item">
-          <a href="">Корзина: пока пуста</a>
+          <a href="#!">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
@@ -38,7 +38,7 @@
       <section class="form-item">
         <legend class="form-item__title">Тип</legend>
         <input type="radio" name="type-order" id="accessory">
-        <label for="acccessory">Аксессуар для интерьера
+        <label for="accessory">Аксессуар для интерьера
         </label>
         <input type="radio" name="type-order" id="toy">
         <label for="toy">Детская игрушка</label>
@@ -69,25 +69,25 @@
       </section>
       <section class="form-item">
         <legend class="form-item__title">Тел</legend>
-        <input type="text" placeholder="+7 ХХХ ХХ ХХ*">
+        <input type="tel" placeholder="+7 ХХХ ХХ ХХ*">
       </section>
       <section class="form-item">
         <legend class="form-item__title">E-mail</legend>
-        <input type="text" placeholder="Ваш Email*">
+        <input type="email" placeholder="Ваш Email*">
       </section>
       <section class="form-item">
         <legend class="form-item__title">Доп</legend>
         <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </section>
-      <p class="post-for-message">*Поля обязательны для заполнения</p>
+      <p class="form-order__text">*Поля обязательны для заполнения</p>
       <button type="submit" class="btn form-order__btn">Отправить заказ</button>
     </form>
   </main>
   <footer class="page-footer">
     <div class="page-footer__social">
-      <a href="" class="social-link social-link--inst"></a>
-      <a href="" class="social-link social-link--fb"></a>
-      <a href="" class="social-link social-link--tw"></a>
+      <a href="#!" class="social-link social-link--inst"></a>
+      <a href="#!" class="social-link social-link--fb"></a>
+      <a href="#!" class="social-link social-link--tw"></a>
     </div>
     <div class="page-footer__developers">
       <span>Разработано</span>
