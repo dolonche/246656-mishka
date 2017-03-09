@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>Mishka form</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body class="page">
   <header class="page-header">
     <div class="page-header__logo">
       <a href="index.html"><img src="" alt="Логотип" width="86" height="35"></a>
@@ -14,7 +15,7 @@
     <nav class="main-nav  main-nav--closed">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
-        <li class="main-nav__list-item">
+        <li class="main-nav__list-item main-nav__list-item--first">
           <a href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__list-item">
@@ -37,7 +38,7 @@
     <form action="https://echo.htmlacademy.ru/" class="form-order">
       <section class="form-item">
         <legend class="form-item__title">Тип</legend>
-        <input type="radio" name="type-order" id="accessory">
+        <input type="radio" name="type-order" id="accessory" checked>
         <label for="accessory">Аксессуар для интерьера
         </label>
         <input type="radio" name="type-order" id="toy">
@@ -61,19 +62,19 @@
       <section class="form-item">
         <legend class="form-item__title">ФИО</legend>
         <label for="name">Имя:</label>
-        <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
+        <input type="text" name="name" id="name" placeholder="Введите ваше имя*" class="form-item__input">
         <label for="last-name">Фамилия:</label>
-        <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*">
+        <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*" class="form-item__input">
         <label for="middlename">Отчество:</label>
-        <input type="text" name="middlename" id="middlename" placeholder="Отчество, если желаете">
+        <input type="text" name="middlename" id="middlename" placeholder="Отчество, если желаете" class="form-item__input">
       </section>
       <section class="form-item">
         <legend class="form-item__title">Тел</legend>
-        <input type="tel" placeholder="+7 ХХХ ХХ ХХ*">
+        <input type="tel" placeholder="+7 ХХХ ХХ ХХ*" class="form-item__input">
       </section>
       <section class="form-item">
         <legend class="form-item__title">E-mail</legend>
-        <input type="email" placeholder="Ваш Email*">
+        <input type="email" placeholder="Ваш Email*" class="form-item__input">
       </section>
       <section class="form-item">
         <legend class="form-item__title">Доп</legend>
