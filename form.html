@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mishka form</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="page-header__logo">
+      <a href="index.html"><img src="" alt="Логотип" width="86" height="35"></a>
+    </div>
+    <nav class="main-nav  main-nav--closed">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a>Вязание на заказ</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a href="#!">Поиск по сайту</a>
+        </li>
+        <li class="main-nav__list-item">
+          <a href="#!">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="page-title">
+      <h1>Вязание на заказ</h1>
+    </section>
+    <p class="pre-form-message">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+    <form action="https://echo.htmlacademy.ru/" class="form-order">
+      <section class="form-item">
+        <legend class="form-item__title">Тип</legend>
+        <input type="radio" name="type-order" id="accessory">
+        <label for="accessory">Аксессуар для интерьера
+        </label>
+        <input type="radio" name="type-order" id="toy">
+        <label for="toy">Детская игрушка</label>
+      </section>
+      <section class="form-item">
+        <legend class="form-item__title">Цвет</legend>
+        <input type="checkbox" name="colour" id="white" checked>
+        <label for="white">Белый</label>
+        <input type="checkbox" name="colour" id="gray" checked>
+        <label for="gray">Серый</label>
+        <input type="checkbox" name="colour" id="tiffany">
+        <label for="tiffany">«Тиффани»</label>
+        <input type="checkbox" name="colour" id="black">
+        <label for="black">Черный</label>
+        <input type="checkbox" name="colour" id="pink">
+        <label for="pink">Розовый</label>
+        <input type="checkbox" name="colour" id="orange">
+        <label for="orange">Оранжевый</label>
+      </section>
+      <section class="form-item">
+        <legend class="form-item__title">ФИО</legend>
+        <label for="name">Имя:</label>
+        <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
+        <label for="last-name">Фамилия:</label>
+        <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*">
+        <label for="middlename">Отчество:</label>
+        <input type="text" name="middlename" id="middlename" placeholder="Отчество, если желаете">
+      </section>
+      <section class="form-item">
+        <legend class="form-item__title">Тел</legend>
+        <input type="tel" placeholder="+7 ХХХ ХХ ХХ*">
+      </section>
+      <section class="form-item">
+        <legend class="form-item__title">E-mail</legend>
+        <input type="email" placeholder="Ваш Email*">
+      </section>
+      <section class="form-item">
+        <legend class="form-item__title">Доп</legend>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      </section>
+      <p class="form-order__text">*Поля обязательны для заполнения</p>
+      <button type="submit" class="btn form-order__btn">Отправить заказ</button>
+    </form>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__social">
+      <a href="#!" class="social-link social-link--inst"></a>
+      <a href="#!" class="social-link social-link--fb"></a>
+      <a href="#!" class="social-link social-link--tw"></a>
+    </div>
+    <div class="page-footer__developers">
+      <span>Разработано</span>
+      <a href="https://htmlacademy.ru/"><img src="" alt="академия"></a>
+    </div>
+  </footer>
+</body>
+
+</html>
