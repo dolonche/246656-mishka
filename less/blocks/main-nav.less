@@ -5,18 +5,16 @@
 }
 
 .main-nav__list-item {
-  font-family: "open-sans-bold";
   box-sizing: border-box;
   border-bottom: 1px solid #ececec;
   &--first {
     border-top: 1px solid #ececec;
   }
   a {
-    font-size: 17px;
+    .font (@font-size: 17px, @line-height: 20px, @font-weight: 700, @color: #000);
     text-decoration: none;
-    color: #000;
     &:hover {
-      opacity: 0.6
+      opacity: 0.6;
     }
   }
 }

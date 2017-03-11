@@ -1,18 +1,19 @@
 .form-order {
   legend {
     text-transform: uppercase;
-    line-height: 16px;
-    color: #63d1bb;
-    font-family: "open-sans-bold";
+    .font (@line-height: 16px, @font-weight: 700, @color: #63d1bb);
   }
   label {
-    font-size: 17px;
-    line-height: 18px;
-    color: #000;
-    font-family: "open-sans-bold";
+    .font (@font-size: 17px, @line-height: 18px, @font-weight: 700, @color: #000);
   }
   textarea {
-    border: 2px solid #444
+    border: 2px solid #444;
+    &-placeholder {
+      font-size: 17px;
+      color: #444;
+      opacity: 0.3;
+      line-height: 18px;
+    }
   }
 }
 
@@ -20,4 +21,10 @@
   border: none;
   border-bottom: 2px solid #444;
   padding-bottom: 7px;
+  &-placeholder {
+    font-size: 17px;
+    color: #444;
+    opacity: 0.3;
+    line-height: 18px;
+  }
 }

@@ -1,8 +1,5 @@
 .product-week__mark {
-  font-family: "open-sans-bold";
-  font-size: 17px;
-  line-height: 20px;
-  color: #63d1bb;
+  .font (@font-size: 17px, @line-height: 20px, @font-weight: 700, @color: #63d1bb);
   text-transform: uppercase;
 }
 
@@ -14,7 +11,6 @@
 }
 
 .product-week__price {
-  font-family: "open-sans-bold";
-  font-size: 17px;
+  .font (@font-size: 17px, @line-height: 20px, @font-weight: 700);
   text-align: center;
 }
