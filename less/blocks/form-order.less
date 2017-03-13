@@ -1,0 +1,30 @@
+.form-order {
+  legend {
+    text-transform: uppercase;
+    .font (@line-height: 16px, @font-weight: 700, @color: #63d1bb);
+  }
+  label {
+    .font (@font-size: 17px, @line-height: 18px, @font-weight: 700, @color: #000);
+  }
+  textarea {
+    border: 2px solid #444;
+    &-placeholder {
+      font-size: 17px;
+      color: @text-color;
+      opacity: 0.3;
+      line-height: 18px;
+    }
+  }
+}
+
+.form-item__input {
+  border: none;
+  border-bottom: 2px solid #444;
+  padding-bottom: 7px;
+  &::placeholder {
+    font-size: 17px;
+    color: @text-color;
+    opacity: 0.3;
+    line-height: 18px;
+  }
+}

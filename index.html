@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>Mishka main page</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page">
   <header class="page-header">
     <div class="page-header__logo">
       <a><img src="" alt="Логотип" width="86" height="35"></a>
@@ -14,16 +15,16 @@
     <nav class="main-nav  main-nav--closed">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
-        <li class="main-nav__list-item">
+        <li class="main-nav__list-item main-nav__list-item--first">
           <a href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__list-item">
           <a href="form.html">Вязание на заказ</a>
         </li>
-        <li class="main-nav__list-item">
+        <li class="main-nav__list-item main-nav__list-item--search">
           <a href="#!">Поиск по сайту</a>
         </li>
-        <li class="main-nav__list-item">
+        <li class="main-nav__list-item main-nav__list-item--cart">
           <a href="#!">Корзина: пока пуста</a>
         </li>
       </ul>
@@ -36,13 +37,13 @@
     <section class="products">
       <div class="products__type  products__type--interior">
         <a href="#!">
-          <h3 class="product__type-title">Предметы интерьера</h3>
+          <h3 class="products__type-title">Предметы интерьера</h3>
           <img src="" alt="">
         </a>
       </div>
       <div class="products__type  products__type--toy">
         <a href="#!">
-          <h3 class="product__type-title">Детские игрушки</h3>
+          <h3 class="products__type-title">Детские игрушки</h3>
           <img src="" alt="">
         </a>
       </div>
@@ -73,27 +74,27 @@
       <h2 class="title-section">Коротко о нас:</h2>
       <div class="about-us__item">
         <img src="" alt="" class="about-us__img">
-        <p class="abot-us__descr">Экологически чистые материалы</p>
+        <p class="about-us__descr">Экологически чистые материалы</p>
       </div>
       <div class="about-us__item">
         <img src="" alt="" class="about-us__img">
-        <p class="abot-us__descr">Скандинавский стиль по российской цене</p>
+        <p class="about-us__descr">Скандинавский стиль по российской цене</p>
       </div>
       <div class="about-us__item">
         <img src="" alt="" class="about-us__img">
-        <p class="abot-us__descr">Увеличивает лайки на фотографиях</p>
+        <p class="about-us__descr">Увеличивает лайки на фотографиях</p>
       </div>
       <div class="about-us__item">
         <img src="" alt="" class="about-us__img">
-        <p class="abot-us__descr">Связано вручную с любовью и умилением</p>
+        <p class="about-us__descr">Связано вручную с любовью и умилением</p>
       </div>
       <div class="about-us__item">
         <img src="" alt="" class="about-us__img">
-        <p class="abot-us__descr">Поддержка отечественного производителя</p>
+        <p class="about-us__descr">Поддержка отечественного производителя</p>
       </div>
       <div class="about-us__item">
         <img src="" alt="" class="about-us__img">
-        <p class="abot-us__descr">Поставляется в подарочной упаковке</p>
+        <p class="about-us__descr">Поставляется в подарочной упаковке</p>
       </div>
     </section>
     <section class="reviews">
@@ -121,7 +122,7 @@
         <span class="contacts__type">адрес:</span>
         <span class="contacts__value">г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</span>
       </div>
-      <iframe src="" frameborder="0" class="contacts__map"></iframe>
+      <img src="/img/map-mobile@1x.jpg" alt="Карта">
       <button class="btn contacts__btn">Напишите нам</button>
     </section>
   </main>
