@@ -1,16 +1,104 @@
+.product-week {
+  .container();
+}
+
+.product-week__wrapper {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .product-week__mark {
   .font (@font-size: 17px, @line-height: 20px, @font-weight: 700, @color: #63d1bb);
   text-transform: uppercase;
+  display: block;
+  margin-top: -15px;
 }
 
 .product-week__chrc {
+  width: 100%;
   border-collapse: collapse;
+  margin-bottom: 28px;
   td {
     border-bottom: 1px solid #ececec;
+    padding-bottom: 5px;
   }
 }
 
 .product-week__price {
   .font (@font-size: 17px, @line-height: 20px, @font-weight: 700);
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media @tablet-widths {
+  .product-week__wrapper {
+    .clearfix();
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .product-week__mark {
+    display: block;
+    margin-left: auto;
+    box-sizing: border-box;
+    width: 70px;
+    text-align: center;
+    margin-top: -75px;
+  }
+  .product-week__descr {
+    float: left;
+    width: ~"calc(50% - 44px)";
+  }
+  .product-week__chrc {
+    float: left;
+    clear: left;
+    width: ~"calc(50% - 44px)";
+  }
+  .product-week__price {
+    float: left;
+    width: ~"calc(50% - 44px)";
+  }
+  .product-week__btn {
+    float: left;
+    width: ~"calc(50% - 44px)";
+  }
+  .product-week__image {
+    float: right;
+    width: 50%;
+    margin-top: -80px;
+  }
+}
+
+@media @desktop-widths {
+  .producct-week {
+    position: relative;
+  }
+  .product-week__wrapper {
+    padding-left: 224px;
+  }
+  .product-week__mark {
+    margin-left: 0;
+    margin-right: auto;
+    float: left;
+    margin-top: -80px;
+    margin-left: -110px;
+  }
+  .product-week__image {
+    margin-top: -200px;
+    width: ~"calc(50% + 80px)";
+  }
+  .product-week__descr {
+    width: ~"calc(50% - 179px)";
+  }
+  .product-week__chrc {
+    width: ~"calc(50% - 179px)";
+  }
+  .product-week__price {
+    width: ~"calc(50% - 179px)";
+    clear: left;
+  }
+  .product-week__btn {
+    width: ~"calc(50% - 179px)";
+    clear: left;
+  }
 }

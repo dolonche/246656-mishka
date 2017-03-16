@@ -4,3 +4,19 @@
     font-size: 18px;
   }
 }
+
+@media @tablet-widths {
+  .title-section {
+    .font(@font-size: 43px, @line-height: 50px, @font-weight: 700);
+  }
+}
+
+@media @desktop-widths {
+  .title-section {
+    .font(@font-size: 53px, @line-height: 507px, @font-weight: 700);
+    &--week {
+      margin-top: -140px;
+      margin-bottom: -200px;
+    }
+  }
+}

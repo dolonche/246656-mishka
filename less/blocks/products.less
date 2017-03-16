@@ -15,4 +15,37 @@
   font-size: 19px;
   color: #fff;
   text-decoration: none;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.products {
+  .container();
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: -18px;
+}
+
+@media @tablet-widths {
+  .products {
+    flex-direction: row;
+  }
+  .products__type {
+    width: ~"calc(50% - 44px)";
+    margin-left: 50px;
+    margin-top: -95px;
+    z-index: 10;
+    &--toy {
+      margin-left: 0;
+    }
+  }
+  .products__type-title {
+    padding-top: 20px;
+    padding-left: 50px;
+  }
 }
