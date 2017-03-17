@@ -1,13 +1,13 @@
   .page-title {
-    position: relative;
+    .container();
     min-height: 283px;
-    .container;
+    background-color: #f1f1f1;
     h1 {
       .font (@font-size: 27px, @line-height: 30px, @font-weight: 700, @color: #000);
       padding-top: 76px;
       text-align: center;
-      padding-left: 25px;
-      padding-right: 25px;
+      padding-left: 30px;
+      padding-right: 30px;
     }
     &--background {
       background-image: url(/img/hero-mobile@1x.jpg);
@@ -23,7 +23,15 @@
     }
   }
   
+  .page-title__wrapper {
+    position: relative;
+  }
+  
   @media @tablet-widths {
+    .page-title__wrapper{
+      padding-left: 50px;
+      padding-right: 50px;
+    }
     .page-title {
       min-height: 743px;
       .clearfix();
@@ -42,14 +50,14 @@
         display: block;
         float: left;
         margin-top: 25px;
-        padding-left: 50px;
+        padding-left: 0px;
         a {
           .font(@font-size: 15px, @font-weight: 700, @color: #000);
           text-decoration: none;
         }
       }
     }
-    .page-title--menu__sale{
+    .page-title--menu__sale {
       margin-left: 54px;
     }
   }

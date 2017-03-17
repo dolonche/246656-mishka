@@ -1,11 +1,13 @@
 .slider__control {
-  font-size: 0;
-  button {
-    background-color: transparent;
-    font-size: 17px;
-    border: 1px solid #ececec;
-    margin-left: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .clearfix();
+  width: 100%;
+  margin-bottom: 38px;
+}
+
+@media @tablet-widths {
+  .slider__control {
+    width: 184px;
+    margin-left: auto;
+    margin-top: -70px;
   }
 }

@@ -12,19 +12,19 @@
     <div class="page-header__logo">
       <a href="index.html"><img src="" alt="Логотип" width="86" height="35"></a>
     </div>
-    <nav class="main-nav  main-nav--closed">
+    <nav class="main-nav  main-nav--closed main-nav--no-js">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
         <li class="main-nav__list-item main-nav__list-item--first">
-          <a>Каталог товаров</a>
+          <a href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="main-nav__list-item">
+        <li class="main-nav__list-item main-nav__list-item--second">
           <a href="form.html">Вязание на заказ</a>
         </li>
-        <li class="main-nav__list-item">
+        <li class="main-nav__list-item main-nav__list-item--search">
           <a href="#!">Поиск по сайту</a>
         </li>
-        <li class="main-nav__list-item">
+        <li class="main-nav__list-item main-nav__list-item--cart">
           <a href="#!">Корзина: пока пуста</a>
         </li>
       </ul>
@@ -32,54 +32,91 @@
   </header>
   <main>
     <section class="page-title">
-      <h1>Каталог товаров</h1>
-    </section>
-    <section class="product">
-      <a href="#!"><img class="product__image" src="" alt="Зайчик-попрыгайчик"></a>
-      <div class="product-card">
-        <a href="#!"><b class="product__name">Зайчик-попрыгайчик</b></a>
-        <p class="product__chrc">Рост 30 см, вес 200 г</p>
-        <span class="product__price">1 200 руб.</span>
-        <a href="#!" class="product__cart">Добавить в корзину</a>
+      <div class="page-title__wrapper">
+        <div class="page-title--menu">
+          <span><a href="">Новые поступления</a></span>
+          <span class="page-title--menu__sale"><a href="">Распродажа</a></span>
+        </div>
+        <p class="page-title--mark">Бесплатная доставка по России</p>
+        <h1>Каталог товаров</h1>
       </div>
     </section>
-    <section class="product">
-      <a href="#!"><img class="product__image" src="" alt="Корзинка для белья"></a>
-      <div class="product-card">
-        <a href="#!"><b class="product__name">Корзинка для белья</b></a>
-        <p class="product__chrc">Диаметр 15 см, высота 10 см</p>
-        <span class="product__price">690 руб.</span>
-        <a href="#!" class="product__cart">Добавить в корзину</a>
-      </div>
-    </section>
-    <section class="product">
-      <a href="#!"><img class="product__image" src="" alt="Большай корзинка для игрушек"></a>
-      <div class="product-card">
-        <a href="#!"><b class="product__name">Большая корзинка для игрушек</b></a>
-        <p class="product__chrc">Диаметр 30 см, высота 30 см</p>
-        <span class="product__price">1 500 руб.</span>
-        <a href="#!" class="product__cart">Добавить в корзину</a>
-      </div>
-    </section>
+    <div class="product__wrapper">
+      <section class="product">
+        <a href="#!" class="product__image-link"><img class="product__image" src="" alt="Зайчик-попрыгайчик" width="260" height="196"></a>
+        <div class="product-card">
+          <a href="#!"><b class="product__name">Зайчик-попрыгайчик</b></a>
+          <p class="product__chrc">Рост 30 см, вес 200 г</p>
+          <span class="product__price">1 200 руб.</span>
+          <a href="#!" class="product__cart">Добавить в корзину</a>
+        </div>
+      </section>
+      <section class="product">
+        <a href="#!" class="product__image-link"><img class="product__image" src="" alt="Корзинка для белья" width="260" height="196"></a>
+        <div class="product-card">
+          <a href="#!"><b class="product__name">Корзинка для белья</b></a>
+          <p class="product__chrc">Диаметр 15 см, высота 10 см</p>
+          <span class="product__price">690 руб.</span>
+          <a href="#!" class="product__cart">Добавить в корзину</a>
+        </div>
+      </section>
+      <section class="product">
+        <a href="#!" class="product__image-link"><img class="product__image" src="" alt="Большая корзинка для игрушек" width="260" height="196"></a>
+        <div class="product-card">
+          <a href="#!"><b class="product__name">Большая корзинка для игрушек</b></a>
+          <p class="product__chrc">Диаметр 30 см, высота 30 см</p>
+          <span class="product__price">1 500 руб.</span>
+          <a href="#!" class="product__cart">Добавить в корзину</a>
+        </div>
+      </section>
+    </div>
+    </div>
     <section class="production-process">
-      <img class="production-process__title-image" src="" alt="камера">
-      <h2 class="title-section">Процесс производства</h2>
-      <a href="#!"><img src="" alt="Процесс производства" class="product-process__image"></a>
-      <p class="production-process__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <button class="btn production-process__btn">Сделать заказ</button>
+      <div class="production-process__wrapper">
+        <div class="production-process__title">
+          <img class="production-process__title-image" src="" alt="камера">
+          <h2 class="title-section">Процесс производства</h2>
+        </div>
+        <a href="#!" class="production-process__image-link"><img src="/img/video-mobile@1x.jpg" alt="Процесс производства" class="production-process__image" width="280"></a>
+        <div class="production-process__descr-wrapper">
+          <p class="production-process__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <button class="btn production-process__btn">Сделать заказ</button>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__social">
-      <a href="#!" class="social-link social-link--inst"></a>
-      <a href="#!" class="social-link social-link--fb"></a>
-      <a href="#!" class="social-link social-link--tw"></a>
-    </div>
-    <div class="page-footer__developers">
-      <span>Разработано</span>
-      <a href="https://htmlacademy.ru/"><img src="" alt="академия"></a>
+    <div class="page-footer__wrapper">
+      <div class="page-footer__logo">
+        <img src="" alt="" width="105" height="45">
+      </div>
+      <div class="page-footer__social">
+        <a href="#!" class="social-link social-link--inst"></a>
+        <a href="#!" class="social-link social-link--fb"></a>
+        <a href="#!" class="social-link social-link--tw"></a>
+      </div>
+      <div class="page-footer__developers">
+        <span>Разработано</span>
+        <a href="https://htmlacademy.ru/"><img src="" alt="академия"></a>
+      </div>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--no-js');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

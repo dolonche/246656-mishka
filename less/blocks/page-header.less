@@ -1,6 +1,8 @@
 .page-header {
-  width: 320px;
-  margin: 0 auto;
+  .container();
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
   position: relative;
   border-bottom: 1px solid #ececec;
   .clearfix();
@@ -22,24 +24,25 @@
 
 @media @tablet-widths {
   .page-header {
-    width: 768px;
+    padding-left: 50px;
     flex-direction: row;
   }
   .page-header__logo {
     text-align: left;
-    margin-left: 50px;
+    margin-left: 0px;
     min-width: 116px;
-    display: inline-block;
   }
 }
 
 @media @desktop-widths {
   .page-header {
-    width: 1150px;
   }
-  .page-header__logo{
+  .page-header__logo {
     position: absolute;
     left: 50%;
     margin-left: -58px;
+    top: 10px;
+    z-index: 10000;
+    background-color: aqua
   }
 }
