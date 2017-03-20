@@ -13,14 +13,14 @@
     <div class="page-header__logo">
       <a href="index.html"><img src="" alt="Логотип" width="86" height="35"></a>
     </div>
-    <nav class="main-nav  main-nav--closed main-nav--no-js">
+    <nav class="main-nav main-nav--closed main-nav--no-js">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list">
-        <li class="main-nav__list-item main-nav__list-item--first">
+        <li class="main-nav__list-item main-nav__list-item--catalog">
           <a href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="main-nav__list-item main-nav__list-item--second">
-          <a href="form.html">Вязание на заказ</a>
+        <li class="main-nav__list-item main-nav__list-item--order">
+          <a>Вязание на заказ</a>
         </li>
         <li class="main-nav__list-item main-nav__list-item--search">
           <a href="#!">Поиск по сайту</a>
@@ -34,11 +34,11 @@
   <main>
     <section class="page-title">
       <div class="page-title__wrapper">
-        <div class="page-title--menu">
-          <span><a href="">Новые поступления</a></span>
-          <span class="page-title--menu__sale"><a href="">Распродажа</a></span>
+        <div class="page-title__menu">
+          <span><a href="#!">Новые поступления</a></span>
+          <span class="page-title__menu-sale"><a href="">Распродажа</a></span>
         </div>
-        <p class="page-title--mark">Бесплатная доставка по России</p>
+        <p class="page-title__mark">Бесплатная доставка по России</p>
         <h1>Вязание на заказ</h1>
       </div>
     </section>
@@ -148,22 +148,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--no-js');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
+  <script src="js/js.js"></script>
 </body>
 
 </html>
