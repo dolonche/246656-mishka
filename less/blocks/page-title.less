@@ -28,18 +28,19 @@
   }
   
   @media @tablet-widths {
-    .page-title__wrapper{
+    .page-title__wrapper {
       padding-left: 50px;
       padding-right: 50px;
     }
     .page-title {
-      min-height: 743px;
       .clearfix();
+      &--background {
+        min-height: 743px;
+      }
       &--mark {
         display: block;
-        position: absolute;
-        right: 50px;
-        top: 9px;
+        float: right;
+        margin-top: 25px;
       }
     }
   }
