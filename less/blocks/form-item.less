@@ -1,0 +1,229 @@
+.form-item {
+  padding-left: 30px;
+  padding-right: 30px;
+  textarea {
+    width: 100%;
+    padding-left: 15px;
+    padding-top: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.form-item__input {
+  border: none;
+  border-bottom: 2px solid #444;
+  padding-bottom: 7px;
+  &::placeholder {
+    font-size: 17px;
+    color: @text-color;
+    opacity: 0.3;
+    line-height: 18px;
+  }
+}
+
+.form-item__title__wrapper {
+  display: flex;
+}
+
+.form-item__title {
+  margin-top: 31px;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-top: 2px solid #62d1ba;
+    margin-top: 6px;
+    margin-left: 20px;
+  }
+  &--initials {
+    margin-bottom: -10px;
+  }
+}
+
+.form-item__bunch-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item__bunch {
+  .clearfix();
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    float: left;
+    margin-top: 32px;
+    position: relative;
+  }
+  input[type="radio"]+label::before {
+    content: "";
+    display: block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 24px;
+    margin-top: -8px;
+  }
+  input[type="radio"]:checked+label::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #62d1ba;
+    border-radius: 50%;
+    left: 11px;
+    top: 3px;
+  }
+  input[type="checkbox"]+label::before {
+    content: "";
+    display: block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #000;
+    margin-top: -10px;
+    margin-right: 24px;
+  }
+  input[type="checkbox"]:checked+label::after {
+    content: "";
+    left: 13px;
+    top: -5px;
+    display: block;
+    position: absolute;
+    width: 11px;
+    height: 22px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  input[type="text"] {
+    float: left;
+    clear: left;
+    margin-top: 20px;
+    width: 100%;
+  }
+  input[type="tel"] {
+    width: 100%;
+  }
+  input[type="email"] {
+    width: 100%;
+  }
+}
+
+@media @tablet-widths {
+  .form-item {
+    .clearfix();
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    textarea {
+      width: 75%;
+      float: right;
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+    &--submit {
+      .clearfix();
+      p {
+        float: right;
+      }
+      button {
+        float: left;
+        width: 200px;
+      }
+    }
+  }
+  .form-item__wrapper {
+    background-color: #f1f1f1;
+  }
+  .form-item:nth-child(2n) {
+    background-color: #f1f1f1;
+  }
+  .form-item:nth-child(6) {
+    background-color: #fff;
+  }
+  .form-item__bunch-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 87px;
+    padding-bottom: 50px;
+    margin-top: 0;
+    &--type {
+      flex-direction: column;
+      .form-item__bunch {
+        width: 400px;
+      }
+    }
+    &--initials {
+      flex-direction: column;
+      .form-item__bunch {
+        display: flex;
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+        padding-left: 87px;
+        .clearfix();
+        label {
+          float: left;
+        }
+        input {
+          display: block;
+          margin-left: 15px;
+          padding-top: 13px;
+        }
+      }
+    }
+    &--tel {
+      .form-item__bunch {
+        display: flex;
+        width: 100%;
+      }
+      input {
+        padding-top: 27px;
+        background-color: transparent;
+        width: 100%;
+        display: block;
+      }
+    }
+    &--email {
+      .form-item__bunch {
+        display: flex;
+        width: 100%;
+      }
+      input {
+        padding-top: 27px;
+        background-color: transparent;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  .form-item__bunch {
+    width: 180px;
+    margin-left: 80px;
+  }
+  .form-item__title {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    margin-top: 0;
+    padding-top: 30px;
+    left: 50px;
+    display: inline-block;
+    width: auto;
+    box-sizing: border-box;
+    &::after {
+      display: none;
+    }
+    &--more {
+      top: 20px;
+    }
+  }
+}

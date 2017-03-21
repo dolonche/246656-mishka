@@ -2,6 +2,8 @@
   .font (@font-size: 19px, @line-height: 20px, @font-weight: 700, @color: #fff);
   a {
     text-decoration: none;
+    display: block;
+    width: 100%;
   }
   &--interior {
     background-color: #63d1bb;
@@ -9,10 +11,45 @@
   &--toy {
     background-color: #56c3b2;
   }
+  margin-top: -20px;
 }
 
 .products__type-title {
   font-size: 19px;
   color: #fff;
   text-decoration: none;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.products {
+  .container();
+}
+
+@media @tablet-widths {
+  .products__wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    margin-top: -18px;
+  }
+  .products {
+    flex-direction: row;
+  }
+  .products__type {
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    padding-left: 0px;
+    margin-top: -95px;
+    z-index: 10;
+    &--toy {
+      margin-left: 0;
+    }
+  }
+  .products__type-title {
+    padding-top: 20px;
+    padding-left: 35px;
+  }
 }
