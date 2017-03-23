@@ -1,7 +1,7 @@
 .page-title {
   .container();
-  min-height: 283px;
-  background-color: #f1f1f1;
+  min-height: 177px;
+ background-color: #f1f1f1;
   h1 {
     .font (@font-size: 27px, @line-height: 30px, @font-weight: 700, @color: #000);
     padding-top: 76px;
@@ -14,6 +14,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 283px;
   }
 }
 
@@ -30,14 +31,24 @@
 }
 
 @media @tablet-widths {
+  .page-title {
+    h1 {
+      font-size: 43px;
+      line-height: 50px;
+      padding-top: 96px;
+    }
+  }
   .page-title__wrapper {
     padding-left: 50px;
     padding-right: 50px;
   }
   .page-title {
+     margin-top: -29px;
+          min-height: 225px;
     .clearfix();
     &--background {
       min-height: 743px;
+      margin-top: -30px;
     }
   }
   .page-title__mark {
@@ -48,6 +59,12 @@
 }
 
 @media @desktop-widths {
+  .page-title {
+    h1 {
+      font-size: 53px;
+      line-height: 57px;
+    }
+  }
   .page-title__menu {
     display: block;
     float: left;

@@ -110,6 +110,8 @@
   }
   .main-nav__list-item {
     border-bottom: none;
+    padding-top: 33px;
+    padding-bottom: 33px;
     &--catalog {
       position: absolute;
       top: 100%;
@@ -133,17 +135,32 @@
     }
     &--search {
       order: 0;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 30px;
+      padding-right: 30px;
       border-left: 1px solid #ececec;
       border-right: 1px solid #ececec;
       a {
         font-size: 0;
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-size: contain;
+        background-image: url(/img/icon-search.svg);
       }
     }
     &--cart {
       padding-right: 0px;
       padding-left: 82px;
+      position: relative;
+      &::before{
+        content: "";
+        position: absolute;
+        margin-left: -45px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(/img/icon-cart.svg);
+      }
     }
   }
 }

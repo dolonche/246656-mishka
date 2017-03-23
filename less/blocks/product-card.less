@@ -1,4 +1,6 @@
 .product-card {
+  .clearfix();
+  padding-bottom: 25px;
   border: 1px solid #ececec;
   margin-top: -6px;
   padding-left: 27px;
@@ -16,6 +18,21 @@
 }
 @media @tablet-widths{
   .product-card{
+    height: ~"calc(100% - 18px)";
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex-basis: 50%;
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+    p{
+      font-size: 15px;
+      border-bottom: none;
+    }
   }
 }
