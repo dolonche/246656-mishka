@@ -16,8 +16,9 @@
     padding-bottom: 15px;
   }
 }
-@media @tablet-widths{
-  .product-card{
+
+@media @tablet-widths {
+  .product-card {
     height: ~"calc(100% - 18px)";
     margin-top: 0px;
     padding-top: 5px;
@@ -26,13 +27,21 @@
     flex-direction: column;
     justify-content: space-between;
     flex-basis: 50%;
-    a{
+    a {
       text-decoration: none;
       color: #000;
     }
-    p{
+    p {
       font-size: 15px;
       border-bottom: none;
     }
+  }
+}
+
+@media @desktop-widths {
+  .product-card {
+    margin-top: -6px;
+    padding-left: 30px;
+    padding-right: 32px;
   }
 }
