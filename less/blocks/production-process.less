@@ -13,12 +13,33 @@
 
 .production-process__image {
   display: block;
+  position: relative;
 }
 
 .production-process__image-link {
   width: 100%;
   display: block;
   margin-top: 10px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(/img/icon-play.svg);
+    width: 100px;
+    height: 76px;
+    z-index: 10;
+    top: 50%;
+    margin-top: -38px;
+    left: 50%;
+    margin-left: -50px;
+  }
+  &:hover::after {
+    transform: scale(1.2);
+  }
+  &:active::after {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
 }
 
 .production-process__title {
