@@ -19,6 +19,9 @@
       margin-top: 32px;
     }
   }
+  &--initials {
+    padding-top: 5px;
+  }
 }
 
 .form-item__input {
@@ -69,6 +72,23 @@
   flex-direction: column;
   &--email {
     margin-top: 8px;
+  }
+  &--color {
+    .form-item__bunch:nth-child(1) {
+      margin-top: 4px;
+    }
+    .form-item__bunch:nth-child(4) {
+      margin-top: -3px;
+    }
+    .form-item__bunch:nth-child(5) {
+      margin-top: -1px;
+    }
+    .form-item__bunch:nth-child(6) {
+      margin-top: 0;
+    }
+  }
+  &--tel {
+    padding-top: 6px;
   }
 }
 
@@ -148,6 +168,23 @@
     box-sizing: border-box;
     margin-top: 12px;
   }
+  &--name {
+    label {
+      padding-top: 5px;
+      margin-bottom: -2px;
+    }
+  }
+  &--last-name {
+    label {
+      margin-top: 20px;
+    }
+  }
+  &--middlename {
+    label {
+      margin-top: 20px;
+      margin-bottom: -3px;
+    }
+  }
 }
 
 .form-order__btn {
@@ -155,14 +192,17 @@
 }
 
 @media @tablet-widths {
+  .form-item__input {
+    &::placeholder {
+      font-size: 19px;
+    }
+  }
   .form-item {
     .clearfix();
     padding-left: 50px;
     padding-right: 50px;
     position: relative;
-    &--initials {
-      margin-top: 34px;
-    }
+    &--initials {}
     label {
       font-size: 19px;
       margin-top: 24px;
@@ -172,11 +212,18 @@
       width: 75%;
       float: right;
       margin-top: 54px;
-      font-size: 18px;
+      font-size: 20px;
       margin-bottom: 48px;
+      &::placeholder {
+        font-size: 19px;
+        color: @text-color;
+        opacity: 0.3;
+        line-height: 18px;
+      }
     }
     &--submit {
       .clearfix();
+      margin-bottom: -10px;
       p {
         float: right;
       }
@@ -206,10 +253,22 @@
       .form-item__bunch {
         width: 400px;
       }
+      .form-item__bunch:first-child {
+        label {
+          margin-top: 19px;
+          margin-left: 2px;
+        }
+      }
+      .form-item__bunch:last-child {
+        label {
+          margin-top: 30px;
+          margin-left: 2px;
+        }
+      }
     }
     &--color {
       box-sizing: border-box;
-      padding-top: 30px;
+      padding-top: 28px;
       .form-item__bunch {
         width: 200px;
         margin-left: 82px;
@@ -217,9 +276,25 @@
       .form-item__bunch:nth-child(2n) {
         margin-left: 62px;
       }
+      .form-item__bunch:nth-child(1) {
+        margin-top: 3px;
+      }
+      .form-item__bunch:nth-child(2) {
+        margin-top: 3px;
+      }
+      .form-item__bunch:nth-child(4) {
+        margin-top: 0;
+      }
+      .form-item__bunch:nth-child(5) {
+        margin-top: 0;
+      }
+      .form-item__bunch:nth-child(6) {
+        margin-top: 0;
+      }
     }
     &--initials {
       flex-direction: column;
+      margin-bottom: 5px;
       .form-item__bunch {
         display: flex;
         flex-direction: row;
@@ -227,16 +302,52 @@
         margin-left: 0;
         box-sizing: border-box;
         padding-left: 84px;
+        padding-top: 0;
         .clearfix();
-        label {}
+        label {
+          margin-top: 50px;
+          margin-left: -3px;
+          margin-right: 8px;
+        }
         input {
           display: block;
           margin-left: 15px;
           padding-top: 13px;
+          margin-top: 40px;
           padding-left: 15px;
           font-size: 19px;
           width: auto;
           flex-grow: 1;
+        }
+        &--name {
+          label {
+            padding-top: 9px;
+            margin-bottom: 0;
+          }
+          input {
+            box-sizing: border-box;
+            padding-top: 23px;
+            padding-left: 20px;
+          }
+        }
+        &--last-name {
+          label {
+            padding-top: 30px;
+            margin-top: 0;
+          }
+          input {
+            margin-top: 20px;
+            padding-left: 20px;
+          }
+        }
+        &--middlename {
+          label {
+            margin-top: 30px;
+          }
+          input {
+            margin-top: 21px;
+            padding-left: 20px;
+          }
         }
       }
       .form-item__bunch:not(:first-of-type) {
@@ -252,7 +363,7 @@
         }
       }
       input {
-        padding-top: 57px;
+        padding-top: 50px;
         background-color: transparent;
         width: 100%;
         display: block;
@@ -301,9 +412,10 @@
       height: 50px;
     }
     input[type="checkbox"]:checked+label::after {
-      height: 34px;
+      height: 28px;
       width: 22x;
-      left: 20px;
+      left: 22px;
+      top: 0;
     }
   }
   .form-item__title {
@@ -323,7 +435,10 @@
       top: 40px;
     }
     &--color {
-      top: 37px;
+      top: 42px;
+    }
+    &--initials {
+      top: 44px;
     }
   }
   button.form-order__btn {
@@ -362,10 +477,83 @@
     textarea {
       margin-right: 174px;
       width: 700px;
+      &::placeholder {
+        font-size: 20px;
+        color: @text-color;
+        opacity: 0.3;
+        line-height: 18px;
+        font-weight: 400;
+      }
     }
   }
   .form-order__text {
     margin-right: 174px;
     margin-top: 10px;
+  }
+  .form-item__bunch-wrapper {
+    &--type {
+      .form-item__bunch:first-of-type {
+        label {
+          margin-top: 25px;
+          margin-left: 8px;
+        }
+      }
+      .form-item__bunch:last-of-type {
+        label {
+          margin-top: 30px;
+          margin-left: 8px;
+        }
+      }
+    }
+    &--color {
+      box-sizing: border-box;
+      padding-top: 28px;
+      .form-item__bunch {
+        width: 200px;
+        margin-left: 82px;
+      }
+      .form-item__bunch:nth-child(1) {
+        margin-left: 87px;
+        margin-top: 1px;
+      }
+      .form-item__bunch:nth-child(2) {
+        margin-left: 64px;
+        margin-top: 1px;
+      }
+      .form-item__bunch:nth-child(3) {
+        margin-left: 64px;
+        margin-top: 1px;
+      }
+      .form-item__bunch:nth-child(4) {
+        margin-left: 87px;
+        margin-top: 0;
+      }
+      .form-item__bunch:nth-child(5) {
+        margin-left: 64px;
+        margin-top: 0;
+      }
+      .form-item__bunch:nth-child(6) {
+        margin-left: 64px;
+        margin-top: 0;
+      }
+    }
+    &--initials {
+      .form-item__bunch {
+        padding-right: 176px;
+        label {
+          margin-left: 4px;
+        }
+        input {}
+      }
+    }
+    &--tel,
+    &--email {
+      .form-item__bunch {
+        padding-right: 176px;
+        input {
+          margin-left: 10px;
+        }
+      }
+    }
   }
 }

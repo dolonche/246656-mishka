@@ -35,7 +35,8 @@
     h1 {
       font-size: 43px;
       line-height: 50px;
-      padding-top: 96px;
+      padding-top: 95px;
+      padding-left: 35px;
     }
   }
   .page-title__wrapper {
@@ -49,17 +50,21 @@
     &--background {
       min-height: 743px;
       margin-top: -30px;
+      h1{
+        padding-top: 153px;
+      }
     }
   }
   .page-title__mark {
     display: block;
     float: right;
-    margin-top: 25px;
+    margin-top: 15px;
   }
 }
 
 @media @desktop-widths {
   .page-title {
+    margin-top: -37px;
     h1 {
       font-size: 53px;
       line-height: 57px;
@@ -68,7 +73,7 @@
   .page-title__menu {
     display: block;
     float: left;
-    margin-top: 25px;
+    margin-top: 16px;
     padding-left: 0px;
     a {
       .font(@font-size: 15px, @font-weight: 700, @color: #000);
@@ -82,6 +87,9 @@
     }
   }
   .page-title__menu-sale {
-    margin-left: 54px;
+    margin-left: 57px;
+  }
+  .page-title__mark {
+    margin-top: 16px;
   }
 }
