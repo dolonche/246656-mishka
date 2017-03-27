@@ -9,9 +9,27 @@
 </head>
 
 <body class="page">
+  <div class="popup">
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Добавить в корзину</h2>
+      <p class="popup__text">Выберите размер:</p>
+      <form action="" class="popup__sizes">
+        <div class="popup__sizes-item"><input type="radio" name="size" id="s" checked><label for="s">S</label></div>
+        <div class="popup__sizes-item"><input type="radio" name="size" id="m"> <label for="m">M</label></div>
+        <div class="popup__sizes-item"><input type="radio" name="size" id="l"> <label for="l">L</label></div>
+        <button class="btn popup__btn">Добавить</button>
+      </form>
+    </div>
+  </div>
   <header class="page-header">
     <div class="page-header__logo">
-      <a><img src="img/logo-mobile.svg" alt="Логотип" width="86" height="35"></a>
+      <a>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg" width="149" height="72">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="113">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="логотип">
+        </picture>
+      </a>
     </div>
     <nav class="main-nav main-nav--closed main-nav--no-js">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -76,7 +94,11 @@
             <td class="product-week__value">15 см</td>
           </tr>
         </table>
-        <img src="img/triple-set-mobile@1x.jpg" alt="Товар недели" class="product-week__image" width="260" height="315">
+        <picture>
+          <source class="" media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+          <source class="" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+          <img class="product-week__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Товар недели" width="260" height="315">
+        </picture>
         <div class="product-week__price">Цена: 990 руб.</div>
         <button class="btn product-week__btn">Заказать</button>
       </div>
@@ -126,7 +148,7 @@
             <button class="reviews__next">Следующий отзыв</button>
           </div>
         </div>
-        <button class="btn reviews__btn">Написать</button>
+        <a href="reviews" class="btn reviews__btn">Написать</a>
       </div>
     </section>
     <section class="contacts">
@@ -141,14 +163,19 @@
           <span class="contacts__value">г. Санкт-Петербург,<br>ул. Большая <br> Конюшенная,<br>д. 19/8, офис 101</span>
         </div>
       </div>
+      <picture>
+        <source class="" media="(min-width: 1200px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" class="contacts__map" alt="Карта">
+        <source class="" media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" class="contacts__map" alt="Карта">
+        <img class="product-week__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Товар недели" width="260" height="315" class="contacts__map" alt="Карта">
+      </picture>
       <img src="img/map-mobile@1x.jpg" alt="Карта" class="contacts__map">
-      <button class="btn contacts__btn">Напишите нам</button>
+      <a href="#!" class="btn contacts__btn">Напишите нам</a>
     </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
-        <img src="img/" alt="логотип" width="105" height="45">
+        <img src="/img/logo-footer.svg" alt="логотип" width="105" height="45">
       </div>
       <div class="page-footer__social">
         <a href="#!" class="social-link social-link--inst"></a>
@@ -161,7 +188,9 @@
       </div>
     </div>
   </footer>
+  <div class="overlay"></div>
   <script src="js/script.js"></script>
+
 </body>
 
 </html>

@@ -34,6 +34,21 @@
 }
 
 @media @tablet-widths {
+  .product-week {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 17px;
+      background-image: url(../img/bg-zigzag-line.svg);
+      width: 100%;
+      bottom: -72px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 0;
+    }
+  }
   .product-week__wrapper {
     .clearfix();
     padding-left: 50px;

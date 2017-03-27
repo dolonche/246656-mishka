@@ -11,7 +11,13 @@
 <body class="page">
   <header class="page-header">
     <div class="page-header__logo">
-      <a href="index.html"><img src="img/logo-mobile.svg" alt="Логотип" width="86" height="35"></a>
+      <a href="index.html">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg" width="149" height="72">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="113">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="логотип">
+        </picture>
+      </a>
     </div>
     <nav class="main-nav main-nav--closed main-nav--no-js">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -135,7 +141,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
-        <img src="" alt="" width="105" height="45">
+        <img src="/img/logo-footer.svg" alt="логотип" width="105" height="45">
       </div>
       <div class="page-footer__social">
         <a href="#!" class="social-link social-link--inst"></a>
