@@ -89,11 +89,36 @@
   &--catalog {
     border-top: 1px solid #ececec;
   }
+  &--search {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/icon-search.svg);
+      background-repeat: no-repeat;
+      left: 30px;
+    }
+  }
+  &--cart {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/icon-cart.svg);
+      background-repeat: no-repeat;
+      left: 30px;
+    }
+  }
   a {
     .font (@font-size: 17px, @line-height: 20px, @font-weight: 700, @color: #000);
     text-decoration: none;
     &:hover {
       opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
     }
   }
 }
@@ -110,13 +135,15 @@
   }
   .main-nav__list-item {
     border-bottom: none;
+    padding-top: 33px;
+    padding-bottom: 33px;
     &--catalog {
       position: absolute;
       top: 100%;
       left: 50px;
       padding: 0;
       border-top: none;
-      margin-top: 25px;
+      margin-top: 17px;
       a {
         font-size: 15px;
       }
@@ -124,26 +151,49 @@
     &--order {
       position: absolute;
       top: 100%;
-      left: 230px;
+      left: 220px;
       padding: 0;
-      margin-top: 25px;
+      margin-top: 17px;
       a {
         font-size: 15px;
       }
     }
     &--search {
       order: 0;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 30px;
+      padding-right: 30px;
       border-left: 1px solid #ececec;
       border-right: 1px solid #ececec;
       a {
         font-size: 0;
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-size: contain;
+        background-image: url(../img/icon-search.svg);
+        margin-top: 5px;
+      }
+      &::after {
+        display: none;
       }
     }
     &--cart {
       padding-right: 0px;
       padding-left: 82px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        margin-left: -50px;
+        margin-top: 5px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url(../img/icon-cart.svg);
+      }
+      &::after {
+        display: none;
+      }
     }
   }
 }

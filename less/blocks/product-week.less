@@ -3,6 +3,8 @@
 }
 
 .product-week__wrapper {
+  margin-top: 30px;
+  margin-bottom: 70px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -16,18 +18,19 @@
 .product-week__chrc {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 30px;
   margin-bottom: 28px;
   td {
     border-bottom: 1px solid #ececec;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
 }
 
 .product-week__price {
   .font (@font-size: 17px, @line-height: 20px, @font-weight: 700);
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 22px;
+  margin-bottom: 28px;
 }
 
 @media @tablet-widths {
@@ -35,6 +38,7 @@
     .clearfix();
     padding-left: 50px;
     padding-right: 50px;
+    margin-top: -6px;
   }
   .product-week__mark {
     float: right;
@@ -43,34 +47,46 @@
     text-align: center;
     clear: both;
     margin-top: 7px;
+    margin-right: 24px;
   }
   .product-week__descr {
     float: left;
+    .font(@font-size: 17px, @line-height: 30px);
     width: ~"calc(50% - 44px)";
+    margin-top: 9px;
   }
   .product-week__chrc {
     float: left;
     clear: left;
     width: ~"calc(50% - 44px)";
+    margin-top: 23px;
+    td {
+      padding-top: 5px;
+    }
   }
   .product-week__price {
     float: left;
     width: ~"calc(50% - 44px)";
+    font-size: 20px;
+    margin-top: 28px;
   }
   .product-week__btn {
     float: left;
     width: ~"calc(50% - 44px)";
+    margin-top: 10px;
   }
   .product-week__image {
     float: right;
     width: 50%;
-    margin-top: -80px;
+    margin-top: -96px;
+    height: 405px;
   }
 }
 
 @media @desktop-widths {
   .product-week {
     position: relative;
+    z-index: 10
   }
   .product-week__wrapper {
     padding-left: 224px;
@@ -82,21 +98,27 @@
   }
   .product-week__image {
     width: 525px;
+    height: 637px;
     position: absolute;
-    right: 45px;
+    right: 50px;
+    top: 113px;
+    z-index: -1;
   }
   .product-week__descr {
-    width: ~"calc(50% - 179px)";
+    width: ~"calc(50% - 139px)";
+    margin-top: 5px;
   }
   .product-week__chrc {
-    width: ~"calc(50% - 179px)";
+    width: ~"calc(50% - 146px)";
+    margin-top: 29px;
   }
   .product-week__price {
-    width: ~"calc(50% - 179px)";
+    width: ~"calc(50% - 139px)";
     clear: left;
+    margin-top: 82px;
   }
   .product-week__btn {
-    width: ~"calc(50% - 179px)";
+    width: ~"calc(50% - 147px)";
     clear: left;
   }
 }

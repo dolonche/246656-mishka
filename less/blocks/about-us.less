@@ -1,5 +1,6 @@
 .about-us {
   .container();
+  margin-bottom: 60px;
 }
 
 .about-us__wrapper {
@@ -8,7 +9,7 @@
 }
 
 .about-us__item {
-  margin-top: 74px;
+  margin-top: 30px;
 }
 
 .about-us__descr {
@@ -29,36 +30,78 @@
     justify-content: flex-start;
     flex-wrap: wrap;
   }
+  .about-us__descr {
+    .font (@font-size: 20px, @line-height: 22px, @font-weight: 700, @color: #000);
+  }
   .about-us__item {
     width: 50%;
     padding-right: 86px;
     box-sizing: border-box;
+    margin-bottom: 7px;
     &:nth-child(1) {
       order: 1;
-      padding-right: 150px;
+      padding-right: 130px;
+      margin-top: 14px;
+      img {
+        padding-top: 18px;
+        padding-left: 7px;
+      }
+      p {
+        margin-top: 11px;
+      }
     }
     &:nth-child(2) {
       order: 3;
-      padding-right: 130px;
+      padding-right: 100px;
     }
     &:nth-child(3) {
       order: 5;
-      padding-right: 140px;
+      padding-right: 100px;
+      margin-top: 23px;
+      img {
+        padding-top: 12px;
+        padding-left: 8px;
+      }
+      p {
+        margin-top: 15px;
+      }
     }
     &:nth-child(4) {
       order: 2;
+      padding-right: 80px;
+      img {
+        padding-top: 5px;
+        padding-left: 5px;
+      }
+      p {
+        margin-top: 11px;
+      }
     }
     &:nth-child(5) {
       order: 4;
-      padding-right: 50px;
+      padding-right: 30px;
+      img {
+        padding-top: 5px;
+        margin-left: -5px;
+      }
     }
     &:nth-child(6) {
       order: 6;
+      img {
+        padding-left: 2px;
+        padding-top: 2px;
+      }
+      p {
+        margin-top: 15px;
+      }
     }
   }
 }
 
 @media @desktop-widths {
+  .about-us {
+    margin-bottom: 70px;
+  }
   .about-us__wrapper {
     padding-left: 225px;
     padding-right: 225px;
@@ -68,19 +111,25 @@
     padding-right: 276px;
     box-sizing: border-box;
     &:nth-child(1) {
-      padding-right: 170px;
+      margin-top: 18px;
+      img {
+        padding-left: 10px;
+      }
     }
     &:nth-child(3) {
-      padding-right: 160px;
+      padding-right: 110px;
+      margin-top: 24px;
     }
     &:nth-child(5) {
       padding-right: 10px;
     }
     &:nth-child(4) {
-      padding-right: 130px;
+      padding-right: 100px;
+      margin-top: 34px;
     }
     &:nth-child(6) {
-      padding-right: 130px;
+      padding-right: 80px;
+      margin-top: 30px;
     }
   }
 }

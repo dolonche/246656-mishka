@@ -1,6 +1,6 @@
 .page-title {
   .container();
-  min-height: 283px;
+  min-height: 177px;
   background-color: #f1f1f1;
   h1 {
     .font (@font-size: 27px, @line-height: 30px, @font-weight: 700, @color: #000);
@@ -10,10 +10,11 @@
     padding-right: 30px;
   }
   &--background {
-    background-image: url(/img/hero-mobile@1x.jpg);
+    background-image: url(../img/hero-mobile@1x.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 283px;
   }
 }
 
@@ -30,35 +31,65 @@
 }
 
 @media @tablet-widths {
+  .page-title {
+    h1 {
+      font-size: 43px;
+      line-height: 50px;
+      padding-top: 95px;
+      padding-left: 35px;
+    }
+  }
   .page-title__wrapper {
     padding-left: 50px;
     padding-right: 50px;
   }
   .page-title {
+    margin-top: -29px;
+    min-height: 225px;
     .clearfix();
     &--background {
       min-height: 743px;
+      margin-top: -30px;
+      h1 {
+        padding-top: 153px;
+      }
     }
   }
   .page-title__mark {
     display: block;
     float: right;
-    margin-top: 25px;
+    margin-top: 15px;
   }
 }
 
 @media @desktop-widths {
+  .page-title {
+    margin-top: -37px;
+    h1 {
+      font-size: 53px;
+      line-height: 57px;
+    }
+  }
   .page-title__menu {
     display: block;
     float: left;
-    margin-top: 25px;
+    margin-top: 16px;
     padding-left: 0px;
     a {
       .font(@font-size: 15px, @font-weight: 700, @color: #000);
       text-decoration: none;
+      &:hover {
+        opacity: 0.6
+      }
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
   .page-title__menu-sale {
-    margin-left: 54px;
+    margin-left: 57px;
+  }
+  .page-title__mark {
+    margin-top: 16px;
   }
 }

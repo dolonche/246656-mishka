@@ -3,6 +3,12 @@
   &--small {
     font-size: 18px;
   }
+  &--production {
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: 30px;
+    margin-left: 24px;
+  }
 }
 
 @media @tablet-widths {
@@ -10,6 +16,20 @@
     .font(@font-size: 43px, @line-height: 50px, @font-weight: 700);
     &--about-us {
       width: 100%;
+      box-sizing: border-box;
+      padding-top: 50px;
+      margin-bottom: 13px;
+    }
+    &--reviews {
+      padding-top: 72px;
+      margin-left: -4px;
+    }
+    &--contacts {
+      padding-top: 10px;
+      &::after {
+        content: "";
+        position: absolute;
+      }
     }
   }
 }
@@ -17,5 +37,14 @@
 @media @desktop-widths {
   .title-section {
     .font(@font-size: 53px, @line-height: 57px, @font-weight: 700);
+    &--week {
+      padding-top: 72px;
+    }
+    &--about-us {
+      margin-top: 105px;
+    }
+    &--reviews {
+      padding-top: 60px;
+    }
   }
 }
