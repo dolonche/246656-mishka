@@ -59,12 +59,12 @@
     flex-direction: row;
     position: relative;
     margin-bottom: 40px;
-    &::after{
+    &::after {
       content: "";
       position: absolute;
       width: 100%;
       height: 24px;
-      background-image: url(/img/bg-zigzag-fill.svg);
+      background-image: url(../img/bg-zigzag-fill.svg);
       background-size: contain;
       bottom: -2px;
       left: 0;
@@ -89,6 +89,28 @@
       &::after {
         top: 31px;
         right: 33px;
+      }
+    }
+    &:hover {
+      height: ~"calc(100% + 5px)";
+    }
+    &:hover .products__type-title {
+      padding-top: 8px;
+    }
+    &:active .products__type-title{
+      opacity: 0.3;
+    }
+    &:active::after{
+      opacity: 0.3;
+    }
+    &--interior {
+      &:hover::after {
+        top: 27px;
+      }
+    }
+    &--toy {
+      &:hover::after {
+        top: 26px;
       }
     }
   }

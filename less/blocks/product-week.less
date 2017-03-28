@@ -1,5 +1,18 @@
 .product-week {
+  position: relative;
   .container();
+   &::after {
+      content: "";
+      position: absolute;
+      height: 17px;
+      background-image: url(../img/bg-zigzag-line.svg);
+      width: 100%;
+      background-repeat: repeat-x;
+      bottom: -52px;
+      background-size: contain;
+      left: 0;
+      z-index: 5000;
+    }
 }
 
 .product-week__wrapper {
@@ -43,8 +56,7 @@
       background-image: url(../img/bg-zigzag-line.svg);
       width: 100%;
       bottom: -72px;
-      background-position: center;
-      background-size: contain;
+      background-size: 100% 17px;
       background-repeat: no-repeat;
       left: 0;
     }
@@ -101,7 +113,19 @@
 @media @desktop-widths {
   .product-week {
     position: relative;
-    z-index: 10
+    z-index: 10;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 17px;
+      background-image: url(../img/bg-zigzag-line.svg);
+      width: 100%;
+      background-repeat: repeat-x;
+      bottom: -72px;
+      background-size: contain;
+      left: 0;
+      z-index: 5000;
+    }
   }
   .product-week__wrapper {
     padding-left: 224px;
