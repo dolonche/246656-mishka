@@ -32,15 +32,32 @@
 
 @media @tablet-widths {
   .page-title {
+    position: relative;
     h1 {
       font-size: 43px;
       line-height: 50px;
       padding-top: 95px;
       padding-left: 35px;
     }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 24px;
+      background-image: url(../img/bg-zigzag-fill.svg);
+      background-size: cover;
+      bottom: -5px;
+      left: 50%;
+      margin-left: -50vw;
+      z-index: 1000;
+    }
     &--background {
       background-image: url(../img/hero-desktop@1x.jpg);
       background-size: 1150px 746px;
+      &::after {
+        display: none;
+        z-index: -10;
+      }
     }
   }
   .page-title__wrapper {
@@ -49,7 +66,7 @@
   }
   .page-title {
     margin-top: -29px;
-    min-height: 225px;
+    min-height: 250px;
     .clearfix();
     &--background {
       min-height: 743px;

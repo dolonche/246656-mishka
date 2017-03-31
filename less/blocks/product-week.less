@@ -1,18 +1,19 @@
 .product-week {
   position: relative;
   .container();
-   &::after {
-      content: "";
-      position: absolute;
-      height: 17px;
-      background-image: url(../img/bg-zigzag-line.svg);
-      width: 100%;
-      background-repeat: repeat-x;
-      bottom: -52px;
-      background-size: contain;
-      left: 0;
-      z-index: 5000;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 17px;
+    background-image: url(../img/bg-zigzag-line.svg);
+    width: 100vw;
+    background-repeat: repeat-x;
+    bottom: -52px;
+    background-size: contain;
+    left: 50%;
+    margin-left: -50vw;
+    z-index: 5000;
+  }
 }
 
 .product-week__wrapper {
@@ -54,11 +55,12 @@
       position: absolute;
       height: 17px;
       background-image: url(../img/bg-zigzag-line.svg);
-      width: 100%;
+      width: 100vw;
       bottom: -72px;
-      background-size: 100% 17px;
-      background-repeat: no-repeat;
-      left: 0;
+      background-size: contain;
+      background-repeat: repeat-x;
+      left: 50%;
+      margin-left: -50vw;
     }
   }
   .product-week__wrapper {
@@ -115,16 +117,7 @@
     position: relative;
     z-index: 10;
     &::after {
-      content: "";
-      position: absolute;
-      height: 17px;
-      background-image: url(../img/bg-zigzag-line.svg);
-      width: 100%;
-      background-repeat: repeat-x;
-      bottom: -72px;
-      background-size: contain;
-      left: 0;
-      z-index: 5000;
+      bottom: -92px;
     }
   }
   .product-week__wrapper {

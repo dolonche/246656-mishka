@@ -62,12 +62,13 @@
     &::after {
       content: "";
       position: absolute;
-      width: 100%;
+      width: 100vw;
       height: 24px;
       background-image: url(../img/bg-zigzag-fill.svg);
       background-size: contain;
       bottom: -2px;
-      left: 0;
+      left: 50%;
+      margin-left: -50vw;
       z-index: 1000;
     }
   }
@@ -77,7 +78,7 @@
     width: 50%;
     height: 100%;
     padding-left: 0;
-    margin-top: -100px;
+    margin-top: -130px;
     z-index: 10;
     &--interior {
       &::after {
@@ -97,10 +98,10 @@
     &:hover .products__type-title {
       padding-top: 8px;
     }
-    &:active .products__type-title{
+    &:active .products__type-title {
       opacity: 0.3;
     }
-    &:active::after{
+    &:active::after {
       opacity: 0.3;
     }
     &--interior {
@@ -125,8 +126,10 @@
   .products__type-title {
     padding-top: 10px;
     padding-left: 36px;
+    padding-bottom: 15px;
   }
   .products__type {
+    margin-top: -136px;
     &--interior {
       &::after {
         top: 30px;

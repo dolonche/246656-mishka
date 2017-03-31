@@ -2,7 +2,8 @@
     var navToggle = document.querySelector('.main-nav__toggle');
     var popup = document.querySelector('.popup');
     var cart = document.querySelector('.product__cart');
-    var productWeek = document.querySelector('.product-week__btn')
+    var productWeek = document.querySelector('.product-week__btn');
+    var map = document.getElementById('map');
     var overlay = document.querySelector('.overlay');
     navMain.classList.remove('main-nav--no-js');
 
@@ -43,3 +44,26 @@
         overlay.classList.add('overlay--open');
       }
     });
+
+    var myMap;
+
+    function init() {
+      myMap = new ymaps.Map('map', {
+        center: [59.936365, 30.321668],
+        zoom: 16,
+        controls: []
+      });
+
+      myPlacemark = new ymaps.Placemark(
+      [59.936365, 30.321668], {
+          hintContent: 'Мишка',
+          balloonContent: 'Интернет-магазин вязанных товаров'
+        }, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/icon-map-pin.svg',
+          iconImageSize: [80, 80],
+          iconImageOffset: [-40, -70]
+        }
+      );
+      myMap.geoObjects.add(myPlacemark);
+    }
