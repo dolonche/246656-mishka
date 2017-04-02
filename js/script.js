@@ -56,7 +56,7 @@
       });
       var myPlacemark = new ymaps.Placemark([59.936365, 30.321668], {
         hintContent: 'Мишка',
-        balloonContent: 'Интернет-магазин вязанных товаров'
+        balloonContent: 'Интернет-магазин вязаных товаров'
       }, {
         iconLayout: 'default#image',
         iconImageHref: 'img/icon-map-pin.svg',
