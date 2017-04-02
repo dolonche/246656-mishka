@@ -1,33 +1,34 @@
 .popup {
   display: none;
-  width: 560px;
+  width: 320px;
   height: 342px;
   position: fixed;
   z-index: 100;
-  left: 50%;
-  top: 50vh;
-  margin-left: -280px;
-  margin-top: -171px;
   text-align: center;
-  overflow: hidden;
   background-color: #fff;
-  border-top: 1px solid #c7c7c7;
-  border-bottom: 1px solid #c7c7c7;
+  border: 1px solid #c7c7c7;
+  z-index: 101;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &--open {
+    display: block;
+  }
 }
 
 .popup__wrapper {
-  .container();
   padding-left: 30px;
   padding-right: 30px;
+  box-sizing: border-box;
 }
 
 .popup__title {
   box-sizing: border-box;
   text-transform: uppercase;
-  padding-left: 80px;
-  padding-right: 80px;
   font-size: 25px;
   line-height: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   color: #000;
 }
 
@@ -38,23 +39,66 @@
   display: -o-flex;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .popup__sizes-item {
   width: 78px;
-  button {
-    width: 100%;
-    background-color: transparent;
-    border: 2px solid #ececec;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #444;
+  position: relative;
+  margin-top: 20px;
+  input[type="radio"] {
+    display: none;
+  }
+  label {
     font-weight: 700;
-    text-transform: uppercase;
-    font-size: 17px;
-    outline: none;
-    &:active {
-      border-color: #63d1bb;
+    display: block;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    padding-top: 13px;
+    padding-left: 3px;
+  }
+  label::after {
+    position: absolute;
+    content: "";
+    border: 2px solid #ececec;
+    width: 78px;
+    height: 48px;
+    left: 0;
+    top: 0;
+  }
+  input[type="radio"]:checked+label::after {
+    border-color: #63d1bb
+  }
+}
+
+.popup__btn {
+  color: #fff;
+  background-color: #63d1bb;
+  border-color: #63d1bb;
+  margin-top: 7px;
+}
+
+@media @tablet-widths {
+  .popup__wrapper {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+  .popup {
+    width: 566px;
+  }
+  .popup__title {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+  }
+  .popup__sizes-item {
+    width: 108px;
+    label::after {
+      position: absolute;
+      content: "";
+      border: 2px solid #ececec;
+      width: 104px;
     }
   }
+  .popup__sizes {}
 }

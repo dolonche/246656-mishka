@@ -26,9 +26,15 @@
     }
     &--contacts {
       padding-top: 10px;
+      position: relative;
       &::after {
         content: "";
         position: absolute;
+        width: 47px;
+        height: 81px;
+        background-image: url(../img/icon-flag.svg);
+        right: 0;
+        top: -2px;
       }
     }
   }
@@ -45,6 +51,12 @@
     }
     &--reviews {
       padding-top: 60px;
+    }
+    &--contacts {
+      &::after {
+        left: -114px;
+        top: 0;
+      }
     }
   }
 }
