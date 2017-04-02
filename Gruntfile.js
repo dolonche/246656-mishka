@@ -12,11 +12,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           src: [
- "fonts/**/*.{woff,woff2}",
- "img/**",
- "js/**",
- "*.html"
- ],
+            "fonts/**/*.{woff,woff2}", "img/**", "js/**", "*.html"],
           dest: "build"
  }]
       },
@@ -118,15 +114,6 @@ module.exports = function (grunt) {
       }
     }
   });
-
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);
-  grunt.registerTask("build", [
- "clean",
- "copy",
- "less",
- "postcss",
- "csso",
- "symbols",
- "imagemin"
- ]);
+  grunt.registerTask("build", ["clean", "copy", "less", "postcss", "csso", "symbols", "imagemin"]);
 };
