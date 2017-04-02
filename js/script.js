@@ -16,20 +16,22 @@
         navMain.classList.remove('main-nav--opened');
       }
     });
-    cart.addEventListener('click', function () {
-      if (popup.classList.contains('popup--open')) {
-        popup.classList.remove('popup--open');
-      } else {
-        popup.classList.add('popup--open');
-      }
-    });
-    cart.addEventListener('click', function () {
-      if (overlay.classList.contains('overlay--open')) {
-        overlay.classList.remove('overlay--open');
-      } else {
-        ovelay.classList.add('overlay--open');
-      }
-    });
+    if (cart) {
+      cart.addEventListener('click', function () {
+        if (popup.classList.contains('popup--open')) {
+          popup.classList.remove('popup--open');
+        } else {
+          popup.classList.add('popup--open');
+        }
+      });
+      cart.addEventListener('click', function () {
+        if (overlay.classList.contains('overlay--open')) {
+          overlay.classList.remove('overlay--open');
+        } else {
+          ovelay.classList.add('overlay--open');
+        }
+      });
+    }
     productWeek.addEventListener('click', function () {
       if (popup.classList.contains('popup--open')) {
         popup.classList.remove('popup--open');
@@ -45,25 +47,22 @@
       }
     });
 
-    var myMap;
 
     function init() {
-      myMap = new ymaps.Map('map', {
+      var myMap = new ymaps.Map('map', {
         center: [59.936365, 30.321668],
         zoom: 16,
         controls: []
       });
-
-      myPlacemark = new ymaps.Placemark(
-      [59.936365, 30.321668], {
-          hintContent: 'Мишка',
-          balloonContent: 'Интернет-магазин вязанных товаров'
-        }, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/icon-map-pin.svg',
-          iconImageSize: [80, 80],
-          iconImageOffset: [-40, -70]
-        }
-      );
+      var myPlacemark = new ymaps.Placemark([59.936365, 30.321668], {
+        hintContent: 'Мишка',
+        balloonContent: 'Интернет-магазин вязанных товаров'
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/icon-map-pin.svg',
+        iconImageSize: [80, 80],
+        iconImageOffset: [-40, -70]
+      });
       myMap.geoObjects.add(myPlacemark);
     }
+    ymaps.ready(init);
